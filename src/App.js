@@ -1,6 +1,6 @@
 import React from "react";
 import { HelloWorld } from "./HelloWorld";
-import Cars from "./components/Car";
+import Cars from "./components/Cars";
 
 function App(){
     return (
