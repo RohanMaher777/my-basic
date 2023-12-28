@@ -1,4 +1,4 @@
-import React from "react";
+
 
 function greeting(time){
     return (time >= 12 ? 'Good afternoon !': 'Good morning') 
@@ -9,15 +9,23 @@ function getFullName (firstName, lastName){
 }
 
 function HelloWorld() {
-  const firstName = "Avi";
-  const lastName = "dakshatra"
+  let firstName = "Avi";
+  let lastName = "dakshatra"
   const time = 15
-  const respose = (
+  
+  return <>
     <div>
       <h3> {greeting(time)} {getFullName(firstName, lastName)}</h3>
     </div>
-  );
-  return respose;
+    <div>
+      <button onClick={() =>{
+        firstName = "Neel"
+        lastName = "lohit"
+        console.log(getFullName(firstName, lastName))
+      }}>Upadte Name</button>
+    </div>
+
+  </>;
 }
 
 export { HelloWorld };
